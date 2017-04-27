@@ -8,8 +8,8 @@ import autoprefixer from 'autoprefixer';
 import path from 'path';
 
 const GLOBALS = {
-  'process.env.NODE_ENV': JSON.stringify('production'),
-  __DEV__: false
+  'process.env.NODE_ENV': JSON.stringify('development'),
+  __DEV__: true
 };
 
 export default {
@@ -38,12 +38,12 @@ export default {
     new HtmlWebpackPlugin({
       template: 'src/index.ejs',
       minify: {
-        removeComments: true,
-        collapseWhitespace: true,
-        removeRedundantAttributes: true,
-        useShortDoctype: true,
-        removeEmptyAttributes: true,
-        removeStyleLinkTypeAttributes: true,
+        removeComments: false,
+        collapseWhitespace: false,
+        removeRedundantAttributes: false,
+        useShortDoctype: false,
+        removeEmptyAttributes: false,
+        removeStyleLinkTypeAttributes: false,
         keepClosingSlash: true,
         minifyJS: false,
         minifyCSS: true,
@@ -56,12 +56,12 @@ export default {
     }),
 
     // Minify JS
-    new webpack.optimize.UglifyJsPlugin({ sourceMap: true }),
+    // new webpack.optimize.UglifyJsPlugin({ sourceMap: true }),
 
     new webpack.LoaderOptionsPlugin({
       minimize: true,
       debug: false,
-      noInfo: true, // set to false to see a list of every file being bundled.
+      noInfo: false, // set to false to see a list of every file being bundled.
       options: {
         sassLoader: {
           includePaths: [path.resolve(__dirname, 'src', 'scss')]

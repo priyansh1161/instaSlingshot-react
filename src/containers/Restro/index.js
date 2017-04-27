@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import RestroCard from '../../modules/RestroCard';
+
+//todo make Nothing to show a modular component.
 class Restro extends React.Component{
   constructor(props){
     super(props);
@@ -14,7 +16,7 @@ class Restro extends React.Component{
   }
   render(){
     return <div>
-      { this.state.restro.map(curr => <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+      { this.state.restro.length ? this.state.restro.map(curr => <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12">
         <RestroCard name={curr.name}
                     stars={curr.rating}
                     distance={curr.distance}
@@ -23,7 +25,7 @@ class Restro extends React.Component{
                     id={curr.id}
                     imageURL={curr.image_url}
         />
-      </div>)}
+      </div>) : <div className="text-center text-muted">Nothing here !</div>}
     </div>;
   }
 }

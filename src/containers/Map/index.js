@@ -33,7 +33,7 @@ class Map extends React.Component{
         <ReactMapboxGl
           style="mapbox://styles/mapbox/streets-v8"
           center={[this.state.lng, this.state.lat]}
-          zoom={[9]}
+          zoom={[10]}
           accessToken="pk.eyJ1IjoicHJpeWFuc2gxMTYxMSIsImEiOiJjajIwMTRtY3YwMjkzMndvNXpndXZ1ZTljIn0.SFXi91zeYGbVmNuA8bdDGg"
           containerStyle={{
             height: "500px",

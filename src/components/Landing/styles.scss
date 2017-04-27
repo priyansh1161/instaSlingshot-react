@@ -11,16 +11,21 @@
 }
 .banner-center .form-group {
   display: flex;
+  max-width: 95vw;
 }
 
 body {
   overflow-x : hidden !important;
 }
+$break-small: 320px;
 
 .banner-text {
-  font-size: 8em;
+  font-size: 6em;
   color: white;
   margin-bottom: 40px;
+  @media (max-width: $break-small) {
+    font-size: 4em;
+  }
 }
 
 .tab-content {
@@ -29,10 +34,13 @@ body {
 
 .icon-displace {
   color: white;
-  font-size: 10em;
+  font-size: 7em;
   position: absolute;
   bottom: 0px;
   width: 100vw;
   text-align: center;
   left: 0;
+  @media (max-width: $break-small) {
+    font-size: 4em;
+  }
 }

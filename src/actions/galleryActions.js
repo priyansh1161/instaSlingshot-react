@@ -7,7 +7,7 @@ import axios from 'axios';
 const CLIENT_ID = 'QMFFSNQDTUMVWCJLLRLD3KIBYWD44PK50JQ2U0DHBIQJWTYU';
 const CLIENT_SECRET = 'Q03BNLIRVSTQI4LL14J1VY1EOI0EKBJQGZKAYHR4SWVSLTJY';
 const _AUTH = `client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}&v=20170427`;
-
+// todo implement lazy scrolling
 export function getGallery(lat,lng){
   return function (dispatch) {
     dispatch(showLoading());

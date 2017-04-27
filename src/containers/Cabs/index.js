@@ -13,7 +13,7 @@ class Cabs extends React.Component{
   }
   render(){
     return <div>
-      { this.state.cabs && this.state.cabs.map(curr => <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+      { this.state.cabs.length ? this.state.cabs.map(curr => <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12">
         <CabCard
           title={curr.display_name}
           imageURL={curr.image}
@@ -21,7 +21,7 @@ class Cabs extends React.Component{
           description={curr.description}
           capacity={curr.capacity}
         />
-      </div>)}
+      </div>) : <div className="text-center text-muted">Nothing here !</div>}
     </div>;
   }
 }

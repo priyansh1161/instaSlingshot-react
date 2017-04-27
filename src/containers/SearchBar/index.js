@@ -7,7 +7,7 @@ import * as errorActions from '../../actions/errorActions';
 import './styles.scss';
 
 import PlacesAutocomplete, { geocodeByAddress } from 'react-places-autocomplete';
-
+//todo add props validations 
 class SearchBar extends React.Component {
   constructor(props) {
     super(props);
@@ -17,6 +17,10 @@ class SearchBar extends React.Component {
   }
   handleFormSubmit(event) {
     event.preventDefault();
+    if(!this.state.address){
+      return this.props.errorActions.throwError('Please Select Location first');
+
+    }
     geocodeByAddress(this.state.address,  (err, latLng) => {
       if(err)
         this.props.errorActions.throwError(err.message || 'Unable To fetch location');

@@ -14,7 +14,7 @@ class GalleryContainer extends React.Component{
   render(){
 
     return <div>
-          <Gallery images={this.state.gallery}/>
+          {this.state.gallery.length ? <Gallery images={this.state.gallery}/> : <div className="text-center text-muted">Nothing here !</div> }
       </div>;
   }
 }
