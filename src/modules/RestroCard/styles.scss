@@ -1,0 +1,35 @@
+.card-stay:hover, .btn-add:hover {
+  box-shadow: 0 1px 5px #DDD;
+}
+
+.card-stay {
+  margin: 10px 0;
+  padding: 0;
+  position: relative;
+
+  img {
+    width: 100%;
+    max-height: 200px;
+    min-height:200px;
+  }
+  .card-info {
+    padding: 15px;
+  }
+}
+
+.btn-add {
+  border-radius: 50%;
+  background-color: orangered;
+  height: 40px;
+  width: 40px;
+  border: 1px solid orangered;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
+
+ a.link-card-stay:hover {
+  text-decoration: none;
+}

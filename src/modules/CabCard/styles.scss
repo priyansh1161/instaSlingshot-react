@@ -1,0 +1,11 @@
+.card-basic {
+  &:hover {
+    box-shadow: 0 1px 5px #DDD;
+  }
+  img {
+    width: 100%;
+  }
+  .card-basic-info {
+    padding: 15px;
+  }
+}

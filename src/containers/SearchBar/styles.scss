@@ -1,0 +1,22 @@
+.search-btn{
+  margin-top:2px;
+  span {
+    padding: 5px;
+    display: inline-block;
+  }
+  background: rgba(0, 0, 0, 0) !important;
+  color: white;
+  font-weight: 600;
+  border: 1px solid black !important;
+}
+
+input {
+  background: rgba(0, 0, 0, 0) !important;
+  color: rgba(255, 255, 255, 1) !important;
+  border: 1px solid black !important;
+  box-shadow: none !important;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
